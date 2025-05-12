@@ -27,7 +27,7 @@ COPY 05_MCP_docker ./05_MCP_docker
 WORKDIR /src/05_MCP_docker
 
 # server.py 실행
-CMD ["python", "server.py"]
+CMD ["python", "server_stdio.py"]
 
 
 
