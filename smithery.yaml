@@ -5,7 +5,7 @@ description: "테스트입니다."
 startCommand:
   type: stdio
   configSchema:
-    type: object
+    type: string
     required: "OPENAI_API_KEY"
     properties:
       OPENAI_API_KEY:
