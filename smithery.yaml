@@ -1,3 +1,26 @@
+name: naver-search
+version: 1.0.18
+description: "테스트입니다."
+
 startCommand:
   type: stdio
-  configSchema: object
+  configSchema:
+    type: object
+    required: "OPENAI_API_KEY"
+    properties:
+      OPENAI_API_KEY:
+        type: string
+        description: "OPENAI_API_KEY"
+  commandFunction: |-
+    (config) => ({
+      command: "python",
+      args: ["/src/05_MCP_docker"],
+      env: {
+        OPENAI_API_KEY: OPENAI_API_KEY,
+      }
+    })
+
+build:
+  type: "docker"
+  dockerfile: "./Dockerfile"
+  dockerBuildPath: "."
