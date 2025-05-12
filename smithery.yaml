@@ -5,13 +5,13 @@ description: "테스트입니다."
 startCommand:
   type: stdio
   configSchema:
-    type: "object"
+    type: object
     required: 
       - "OPENAI_API_KEY"
     properties:
       OPENAI_API_KEY:
         type: string
-        description: "OPENAI_API_KEY"
+        description: "OPENAI_API_KEY를 입력하세요"
   commandFunction: |-
     (config) => ({
       command: "python",
@@ -21,9 +21,5 @@ startCommand:
       }
     })
   exampleConfig:
-    apiSecretKey: YOUR_API_KEY_HERE
+    OPENAI_API_KEY: YOUR_API_KEY_HERE
 
-build:
-  type: "docker"
-  dockerfile: "./Dockerfile"
-  dockerBuildPath: "."
