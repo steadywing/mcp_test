@@ -5,7 +5,7 @@ description: "테스트입니다."
 startCommand:
   type: stdio
   configSchema:
-    type: string
+    type: "object"
     required: "OPENAI_API_KEY"
     properties:
       OPENAI_API_KEY:
@@ -24,3 +24,14 @@ build:
   type: "docker"
   dockerfile: "./Dockerfile"
   dockerBuildPath: "."
+
+environment:
+  - name: OPENAI_API_KEY
+    required: true
+
+capabilities:
+  tools:
+    - name: rag_qa
+      description: |
+        [KOR]
+        딥씨크에 대한 답변을 해줍니다.
