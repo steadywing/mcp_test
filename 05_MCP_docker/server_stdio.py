@@ -37,7 +37,7 @@ mcp = FastMCP(
 # 2. 도구 등록
 #-------------------------------------------------------------------
 @mcp.tool()
-def rag_qa2(question: str) -> str:
+def rag_qa(question: str) -> str:
     """벡터 검색 기반 RAG QA. 질문을 입력하면 관련 문서를 검색합니다."""
     results = retriever.invoke(question)
 
