@@ -1,5 +1,5 @@
-name: naver-search
-version: 1.0.18
+name: mcp-test
+version: 1
 description: "테스트입니다."
 
 startCommand:
@@ -16,7 +16,7 @@ startCommand:
       command: "python",
       args: ["/src/05_MCP_docker"],
       env: {
-        OPENAI_API_KEY: OPENAI_API_KEY,
+        OPENAI_API_KEY: config.OPENAI_API_KEY,
       }
     })
 
