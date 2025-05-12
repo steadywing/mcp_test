@@ -13,6 +13,5 @@ startCommand:
       command: "python",
       args: ["server_stdio.py"]
     })
-  exampleConfig:
-    OPENAI_API_KEY: YOUR_API_KEY_HERE
+  exampleConfig: {}
 
