@@ -6,6 +6,8 @@ startCommand:
   type: stdio
   configSchema:
     type: object
+    default: {}
+    description: Start configuration for Calculator MCP Server
   commandFunction: |-
     (config) => ({
       command: "python",
