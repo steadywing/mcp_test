@@ -1,0 +1,9 @@
+{
+    "mcpServers": {
+        "calculator": {
+            "command": "/Users/narae/wanted/mcp_exercise/.venv/bin/python",
+            "args": ["/Users/narae/wanted/mcp_exercise/01_basic_stdio/server.py"],
+            "transport": "stdio"
+        }
+    }
+}

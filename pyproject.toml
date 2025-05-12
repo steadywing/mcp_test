@@ -1,0 +1,22 @@
+[project]
+name = "mcp-exercise"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "asyncio>=3.4.3",
+    "docling>=2.31.0",
+    "faiss-cpu>=1.11.0",
+    "langchain>=0.3.23",
+    "langchain-community>=0.3.21",
+    "langchain-core>=0.3.54",
+    "langchain-docling>=0.2.0",
+    "langchain-huggingface>=0.1.2",
+    "langchain-mcp-adapters>=0.0.9",
+    "langchain-openai>=0.3.14",
+    "langgraph>=0.3.31",
+    "mcp[cli]>=1.6.0",
+    "pandas>=2.2.3",
+    "sentence-transformers>=4.1.0",
+]
