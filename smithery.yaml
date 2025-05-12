@@ -6,19 +6,10 @@ startCommand:
   type: stdio
   configSchema:
     type: object
-    required: 
-      - "OPENAI_API_KEY"
-    properties:
-      OPENAI_API_KEY:
-        type: string
-        description: "OPENAI_API_KEY를 입력하세요"
   commandFunction: |-
     (config) => ({
       command: "python",
-      args: ["server_stdio.py"],
-      env: {
-        OPENAI_API_KEY: config.OPENAI_API_KEY,
-      }
+      args: ["server_stdio.py"]
     })
   exampleConfig:
     OPENAI_API_KEY: YOUR_API_KEY_HERE
