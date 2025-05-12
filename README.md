@@ -1,5 +1,5 @@
-
 # 1. 환경 설치
+[![smithery badge](https://smithery.ai/badge/@steadywing/mcp_test)](https://smithery.ai/server/@steadywing/mcp_test)
 
 * Python 3.10 이상
 
