@@ -14,7 +14,7 @@ startCommand:
   commandFunction: |-
     (config) => ({
       command: "python",
-      args: ["/src/05_MCP_docker/server_stdio.py"],
+      args: ["server_stdio.py"],
       env: {
         OPENAI_API_KEY: config.OPENAI_API_KEY,
       }
