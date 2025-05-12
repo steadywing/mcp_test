@@ -1,0 +1,9 @@
+{
+    "mcpServers": {
+      "rag_server": {
+        "command": "/Users/narae/wanted/mcp_exercise/.venv/bin/python",
+        "args": ["/Users/narae/wanted/mcp_exercise/03_RAG_stdio/server.py"],
+        "transport": "stdio"
+      }
+    }
+  }
