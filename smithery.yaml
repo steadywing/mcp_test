@@ -1,17 +1,16 @@
-name: mcp-test
-version: 1
-description: "테스트입니다."
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
 
+build:
+  dockerfile: ./Dockerfile
+  dockerBuildPath: .
 startCommand:
   type: stdio
   configSchema:
-    type: "object"
-    required: "OPENAI_API_KEY"
-    properties:
-      OPENAI_API_KEY:
-        type: string
-        description: "OPENAI_API_KEY"
-  commandFunction: |-
+    # JSON Schema defining the configuration options for the MCP.
+    type: string
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
     (config) => ({
       command: "python",
       args: ["server_stdio.py"],
@@ -19,19 +18,3 @@ startCommand:
         OPENAI_API_KEY: config.OPENAI_API_KEY,
       }
     })
-
-build:
-  type: "docker"
-  dockerfile: "./Dockerfile"
-  dockerBuildPath: "."
-
-environment:
-  - name: OPENAI_API_KEY
-    required: true
-
-capabilities:
-  tools:
-    - name: rag_qa
-      description: |
-        [KOR]
-        딥씨크에 대한 답변을 해줍니다.
